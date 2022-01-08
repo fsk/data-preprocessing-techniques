@@ -13,7 +13,6 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
-import java.util.stream.IntStream;
 
 @Service
 public class DataPreprocessService {
@@ -281,11 +280,57 @@ public class DataPreprocessService {
     }
 
 
+    public List<Double> zScoreNormalization(String columnName) throws IOException {
+
+        switch (columnName) {
+            case "Insu" -> CELL_NUMBER = 4;
+            case "Mass" -> CELL_NUMBER = 5;
+            case "Pedi" -> CELL_NUMBER = 6;
+            case "Age" -> CELL_NUMBER = 7;
+            default -> CELL_NUMBER = -1;
+        }
+        File file = new File(PATH);
+        FileInputStream fis = new FileInputStream(file);
+        XSSFWorkbook wb = new XSSFWorkbook(fis);
+        Sheet sheet = wb.getSheet(SHEET_NAME);
+
+        cellList.clear();
+
+        for (Row row : sheet) {
+            Cell cell = row.getCell(CELL_NUMBER);
+            if (!cell.toString().equals("Age") && !cell.toString().equals("Insu")
+                    && !cell.toString().equals("Mass") && !cell.toString().equals("Pedi")) {
+                cellList.add(cell.getNumericCellValue());
+            }
+        }
+
+        double standardDeviation = 0.0;
+
+        OptionalDouble average = cellList.stream().mapToDouble(value ->  value).average();
+        int length = cellList.size();
+
+        for (double item : cellList) {
+            standardDeviation = standardDeviation + Math.pow(item - average.getAsDouble(), 2);
+        }
+
+        double standardDeviationFinal = Math.sqrt(standardDeviation / length);
+
+        List<Double> zScore = new ArrayList<>();
+
+        for (double item : cellList) {
+            zScore.add((item - average.getAsDouble()) / standardDeviationFinal);
+        }
+
+        return zScore;
+    }
+
+
     private double median(List<Double> list, int l, int r) {
         int n = r - l + 1;
         n = (n + 1) / 2 + 1;
         return n + 1;
     }
+
 
 
 }

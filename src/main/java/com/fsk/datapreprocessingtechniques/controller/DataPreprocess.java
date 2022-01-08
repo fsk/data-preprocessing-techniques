@@ -51,6 +51,12 @@ public class DataPreprocess {
     }
 
 
+    @GetMapping("z-score-normalization/{columnName}")
+    public List<Double> zScoreNormalization(@PathVariable(value = "columnName") String columnName) throws IOException {
+        return dataPreprocessService.zScoreNormalization(columnName);
+    }
+
+
 
 
 }
