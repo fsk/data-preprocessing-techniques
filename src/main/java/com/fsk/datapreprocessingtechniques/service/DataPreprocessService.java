@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
 
 @Service
 public class DataPreprocessService {
@@ -216,6 +218,67 @@ public class DataPreprocessService {
         return result;
     }
 
+
+
+    public Map<String, Double> fiveNumberSummary(String columnName) throws IOException {
+
+        Map<String, Double> fiveNumberSummary = new HashMap<>();
+        switch (columnName) {
+            case "Insu" -> CELL_NUMBER = 4;
+            case "Mass" -> CELL_NUMBER = 5;
+            case "Pedi" -> CELL_NUMBER = 6;
+            case "Age" -> CELL_NUMBER = 7;
+            default -> CELL_NUMBER = -1;
+        }
+        File file = new File(PATH);
+        FileInputStream fis = new FileInputStream(file);
+        XSSFWorkbook wb = new XSSFWorkbook(fis);
+
+        cellList.clear();
+
+        Sheet sheet = wb.getSheet(SHEET_NAME);
+
+        for (Row row : sheet) {
+            Cell cell = row.getCell(CELL_NUMBER);
+            if (!cell.toString().equals("Age") && !cell.toString().equals("Insu")
+                    && !cell.toString().equals("Mass") && !cell.toString().equals("Pedi")) {
+                cellList.add(cell.getNumericCellValue());
+            }
+        }
+
+        int n = 2;
+
+        int mid_index = (int) median(cellList, 0, n);
+
+        OptionalDouble minNumber = cellList.stream().mapToDouble(value -> value).min();
+        fiveNumberSummary.put("minValue", minNumber.getAsDouble());
+
+        DoubleStream sortedAges = cellList.stream().mapToDouble(value -> value).sorted();
+
+        double Q1 = cellList.get((int) median(cellList, 0, mid_index));
+
+        fiveNumberSummary.put("q1Value", Q1);
+
+        double median = cellList.size()%2 == 0?
+                sortedAges.skip(cellList.size()/2-1).limit(2).average().getAsDouble():
+                sortedAges.skip(cellList.size()/2).findFirst().getAsDouble();
+
+        fiveNumberSummary.put("medianValue", median);
+
+        double Q3 = cellList.get((int) (mid_index + median(cellList, mid_index + 1, n)));
+
+        fiveNumberSummary.put("q3Value", Q3);
+
+        OptionalDouble maxNumber = cellList.stream().mapToDouble(value -> value).max();
+
+        fiveNumberSummary.put("maxValue", maxNumber.getAsDouble());
+
+
+
+        return fiveNumberSummary;
+
+
+    }
 
 
     private double median(List<Double> list, int l, int r) {

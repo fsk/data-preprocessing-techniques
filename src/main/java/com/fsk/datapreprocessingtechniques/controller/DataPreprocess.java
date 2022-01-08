@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class DataPreprocess {
@@ -41,6 +42,12 @@ public class DataPreprocess {
     @GetMapping("min-max-normalization/{columnName}")
     public List minMaxNormalization(@PathVariable(value = "columnName") String columnName) throws IOException {
         return dataPreprocessService.minMaxNormalization(columnName);
+    }
+
+
+    @GetMapping("five-number-summary/{columnName}")
+    public Map<String, Double> fiveNumberSummary(@PathVariable(value = "columnName") String columnName) throws IOException {
+        return dataPreprocessService.fiveNumberSummary(columnName);
     }
 
 
