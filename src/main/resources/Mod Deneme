@@ -1,0 +1,39 @@
+    public void mod() throws IOException {
+        //String path = "C:\\Users\\FSK\\Desktop\\yukseklisans\\data-preprocessing-techniques\\src\\main\\resources\\verionisleme.xlsx";
+        try {
+            ArrayList age = new ArrayList();
+            File file = new File(path);   //creating a new file instance
+            FileInputStream fis = new FileInputStream(file);   //obtaining bytes from the file
+            //creating Workbook instance that refers to .xlsx file
+            XSSFWorkbook wb = new XSSFWorkbook(fis);
+            XSSFSheet sheet = wb.getSheetAt(0).getRow(4).getSheet();     //creating a Sheet object to retrieve object
+            System.out.println(sheet);
+            Iterator<Row> itr = sheet.iterator();    //iterating over excel file
+            while (itr.hasNext()) {
+                Row row = itr.next();
+                Iterator<Cell> cellIterator = row.cellIterator();   //iterating over each column
+                while (cellIterator.hasNext()) {
+                    Cell cell = cellIterator.next();
+                    if (cell.toString().equals("Age")) {
+                        System.out.println(age);
+                        if (!cell.toString().equals("Age"))
+                            age.add(Integer.parseInt(cell.getStringCellValue()));
+                    }
+
+                    /*switch (cell.getCellType()) {
+                        case Cell.CELL_TYPE_STRING:    //field that represents string cell type
+                            System.out.print(cell.getStringCellValue() + "\t\t\t");
+                            break;
+                        case Cell.CELL_TYPE_NUMERIC:    //field that represents number cell type
+                            System.out.print(cell.getNumericCellValue() + "\t\t\t");
+                            break;
+                        default:
+                    }*/
+                }
+                System.out.println("");
+            }
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
