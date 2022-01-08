@@ -19,7 +19,7 @@ public class DataPreprocessService {
     private DataPreprocessService(){}
 
     private static final String SHEET_NAME = "pima";
-    private static final String PATH = "C:\\Users\\FSK\\Desktop\\yukseklisans\\data-preprocessing-techniques\\src\\main\\resources\\verionisleme.xlsx";
+    private static final String PATH = "src//main//resources//verionisleme.xlsx";
     private static int CELL_NUMBER = 0;
     private static ArrayList<Double> cellList = new ArrayList<>();
 
