@@ -57,6 +57,15 @@ public class DataPreprocess {
     }
 
 
+    @GetMapping("three-width-equal/{columnName}")
+    public List<List<Double>> threeWidthEqual(@PathVariable(value = "columnName") String columnName) throws IOException {
+        return dataPreprocessService.threeEqualWidth(columnName);
+    }
+
+
+
+
+
 
 
 }

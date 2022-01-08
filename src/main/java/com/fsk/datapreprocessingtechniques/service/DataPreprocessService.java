@@ -325,6 +325,67 @@ public class DataPreprocessService {
     }
 
 
+    public List<List<Double>> threeEqualWidth(String columnName) throws IOException {
+        //List<Double> cellList = Arrays.asList(4.0, 8.0, 9.0, 15.0, 21.0, 21.0, 24.0, 25.0, 26.0, 28.0, 29.0, 34.0);
+
+        switch (columnName) {
+            case "Insu" -> CELL_NUMBER = 4;
+            case "Mass" -> CELL_NUMBER = 5;
+            case "Pedi" -> CELL_NUMBER = 6;
+            case "Age" -> CELL_NUMBER = 7;
+            default -> CELL_NUMBER = -1;
+        }
+        File file = new File(PATH);
+        FileInputStream fis = new FileInputStream(file);
+        XSSFWorkbook wb = new XSSFWorkbook(fis);
+        Sheet sheet = wb.getSheet(SHEET_NAME);
+
+        cellList.clear();
+
+        for (Row row : sheet) {
+            Cell cell = row.getCell(CELL_NUMBER);
+            if (!cell.toString().equals("Age") && !cell.toString().equals("Insu")
+                    && !cell.toString().equals("Mass") && !cell.toString().equals("Pedi")) {
+                cellList.add(cell.getNumericCellValue());
+            }
+        }
+
+        System.out.println(cellList);
+        System.out.println("********");
+        System.out.println(cellList.size());
+
+        Double maximumElement = cellList.stream().mapToDouble(value -> value).max().getAsDouble();
+        Double minimumElement = cellList.stream().mapToDouble(value -> value).min().getAsDouble();
+
+
+        List<Double> sortedList = cellList.stream().sorted().collect(Collectors.toList());
+
+        int partition = 0;
+        if (!columnName.equals("Pedi")) {
+            partition = Math.floorDiv((int) (maximumElement - minimumElement), 3);
+        }else {
+            partition = 1;
+        }
+
+
+        System.out.println(partition);
+
+        List<List<Double>> newList = new ArrayList<>();
+
+        for(int i = 0; i < sortedList.size(); ) {
+            List<Double> tempList = new ArrayList<>();
+            Double j = sortedList.get(i);
+            for( ; sortedList.get(i) < j + partition ;) {
+                tempList.add(sortedList.get(i++));
+                if(i == sortedList.size()) break;
+            }
+            newList.add(tempList);
+        }
+
+        return newList.stream().peek(System.out::println).collect(Collectors.toList());
+    }
+
+
     private double median(List<Double> list, int l, int r) {
         int n = r - l + 1;
         n = (n + 1) / 2 + 1;
