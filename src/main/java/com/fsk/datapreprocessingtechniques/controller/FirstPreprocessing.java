@@ -21,7 +21,7 @@ public class FirstPreprocessing {
                 <br>
                 <strong>Numara:</strong> 208229052002
                 <br>
-                <strong>Kaynak Kod:</strong><a href="https://github.com/fsk" target="_blank">Kaynak Kod için bu yazının üstüne tıklayınız</a>
+                <strong>Kaynak Kod:</strong><a href="https://github.com/fsk/data-preprocessing-techniques" target="_blank">Kaynak Kod için bu yazının üstüne tıklayınız</a>
                 <hr>
                 <br>
                 <p style="font-size: 32px"><strong><i>Hocam öncelikle ödevi geç göndermeme müsade ettiğiniz için çok teşekkür ederim.</i></strong>
@@ -44,7 +44,7 @@ public class FirstPreprocessing {
                     <li>Apache Math3 Commons</li>
                     <li>Java String Interpolation</li>
                 </ul>
-                <strong>Uygulamanin acilmasi icin asagidaki butona tiklayiniz..</strong>
+                <p style="font-size: 30px"><strong>Uygulamanin acilmasi icin asagidaki butona tiklayiniz..</strong></p>
                 <br>
                 <br>
                 <button>
