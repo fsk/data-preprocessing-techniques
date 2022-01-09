@@ -108,42 +108,42 @@ public class DataPreprocess {
                     <tr>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/average/Insu">Average</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/average/Insu">Average</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/mode/Insu">Mod</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/mode/Insu">Mod</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/standartDeviation/Insu">Standart Sapma</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/standartDeviation/Insu">Standart Sapma</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/five-number-summary/Insu">Beş Sayı Özeti</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/five-number-summary/Insu">Beş Sayı Özeti</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/iqr/Insu">IQR</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/iqr/Insu">IQR</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/min-max-normalization/Insu">Min-Max Normalization</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/min-max-normalization/Insu">Min-Max Normalization</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/z-score-normalization/Insu">Z Score Normalization</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/z-score-normalization/Insu">Z Score Normalization</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/three-width-equal/Insu">3 Equal Width</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/three-width-equal/Insu">3 Equal Width</a>
                             </button>
                         </td>
                     </tr>
@@ -159,42 +159,42 @@ public class DataPreprocess {
                     <tr>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/average/Mass">Average</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/average/Mass">Average</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/mode/Mass">Mod</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/mode/Mass">Mod</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/standartDeviation/Mass">Standart Sapma</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/standartDeviation/Mass">Standart Sapma</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/five-number-summary/Mass">Beş Sayı Özeti</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/five-number-summary/Mass">Beş Sayı Özeti</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/iqr/Mass">IQR</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/iqr/Mass">IQR</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/min-max-normalization/Mass">Min-Max Normalization</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/min-max-normalization/Mass">Min-Max Normalization</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/z-score-normalization/Mass">Z Score Normalization</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/z-score-normalization/Mass">Z Score Normalization</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/three-width-equal/Mass">3 Equal Width</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/three-width-equal/Mass">3 Equal Width</a>
                             </button>
                         </td>
                     </tr>
@@ -210,42 +210,42 @@ public class DataPreprocess {
                     <tr>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/average/Pedi">Average</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/average/Pedi">Average</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/mode/Pedi">Mod</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/mode/Pedi">Mod</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/standartDeviation/Pedi">Standart Sapma</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/standartDeviation/Pedi">Standart Sapma</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/five-number-summary/Pedi">Beş Sayı Özeti</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/five-number-summary/Pedi">Beş Sayı Özeti</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/iqr/Pedi">IQR</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/iqr/Pedi">IQR</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/min-max-normalization/Pedi">Min-Max Normalization</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/min-max-normalization/Pedi">Min-Max Normalization</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/z-score-normalization/Pedi">Z Score Normalization</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/z-score-normalization/Pedi">Z Score Normalization</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/three-width-equal/Pedi">3 Equal Width</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/three-width-equal/Pedi">3 Equal Width</a>
                             </button>
                         </td>
                     </tr>
@@ -261,42 +261,42 @@ public class DataPreprocess {
                     <tr>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/average/Age">Average</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/average/Age">Average</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/mode/Age">Mod</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/mode/Age">Mod</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/standartDeviation/Age">Standart Sapma</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/standartDeviation/Age">Standart Sapma</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/five-number-summary/Age">Beş Sayı Özeti</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/five-number-summary/Age">Beş Sayı Özeti</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/iqr/Age">IQR</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/iqr/Age">IQR</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/min-max-normalization/Age">Min-Max Normalization</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/min-max-normalization/Age">Min-Max Normalization</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/z-score-normalization/Age">Z Score Normalization</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/z-score-normalization/Age">Z Score Normalization</a>
                             </button>
                         </td>
                         <td>
                             <button>
-                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/data-preprocessor-techniques/three-width-equal/Age">3 Equal Width</a>
+                                <a href="https://data-preporessor-techniques.herokuapp.com/data-preprocessor-techniques/three-width-equal/Age">3 Equal Width</a>
                             </button>
                         </td>
                     </tr>
