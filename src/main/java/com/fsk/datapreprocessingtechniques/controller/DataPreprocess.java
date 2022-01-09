@@ -3,6 +3,7 @@ package com.fsk.datapreprocessingtechniques.controller;
 import com.fsk.datapreprocessingtechniques.service.DataPreprocessService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@RequestMapping("/data-preprocessor-techniques/")
 public class DataPreprocess {
 
     private final DataPreprocessService dataPreprocessService;
@@ -61,6 +63,229 @@ public class DataPreprocess {
     public List<List<Double>> threeWidthEqual(@PathVariable(value = "columnName") String columnName) throws IOException {
         return dataPreprocessService.threeEqualWidth(columnName);
     }
+
+
+    /*@GetMapping("/")
+    public String explain() {
+        return  """
+                <button id="demo">Hello Folks</button>
+                <div id="result"></div>
+
+
+                <script>
+                    var button = document.getElementById("demo");
+                    var result = document.getElementById("result");
+                    button.addEventListener("click", function(){
+                        fetch('http://localhost:8080/three-width-equal/Age')
+                        .then(res => res.json())
+                        .then(data => {
+                            result.innerText = JSON.stringify(data);
+                        })
+                        .catch(err => console.log(err))
+                    })
+                </script>
+
+                """;
+    }
+
+    public String buttonClick() {
+        return "Selam";
+    }*/
+
+    @GetMapping("/")
+    public String explain() {
+        return """
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Veri Onisleme Teknikleri</title>
+                </head>
+                <body>
+                                
+                <table>
+                    <tr>
+                        <td>INSU</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/average/Insu">Average</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/mode/Insu">Mod</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/standartDeviation/Insu">Standart Sapma</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/iqr/Insu">IQR</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/min-max-normalization/Insu">Min-Max Normalization</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/z-score-normalization/Insu">Z Score Normalization</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/three-width-equal/Insu">3 Equal Width</a>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                                
+                <br><br>
+                                
+                <table>
+                    <tr>
+                        <td>MASS</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/average/Mass">Average</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/mode/Mass">Mod</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/standartDeviation/Mass">Standart Sapma</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/iqr/Mass">IQR</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/min-max-normalization/Mass">Min-Max Normalization</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/z-score-normalization/Mass">Z Score Normalization</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/three-width-equal/Mass">3 Equal Width</a>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                                
+                <br><br>
+                                
+                <table>
+                    <tr>
+                        <td>Pedi</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/average/Pedi">Average</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/mode/Pedi">Mod</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/standartDeviation/Pedi">Standart Sapma</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/iqr/Pedi">IQR</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/min-max-normalization/Pedi">Min-Max Normalization</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/z-score-normalization/Pedi">Z Score Normalization</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/three-width-equal/Pedi">3 Equal Width</a>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                                
+                <br><br>
+                                
+                <table>
+                    <tr>
+                        <td>AGE</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/average/Age">Average</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/mode/Age">Mod</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/standartDeviation/Age">Standart Sapma</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/iqr/Age">IQR</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/min-max-normalization/Age">Min-Max Normalization</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/z-score-normalization/Age">Z Score Normalization</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="http://localhost:8080/data-preprocessor-techniques/three-width-equal/Age">3 Equal Width</a>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                                
+                </body>
+                                
+                """;
+    }
+
+
+
 
 
 
